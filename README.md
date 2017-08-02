@@ -4,7 +4,7 @@ DNSMasq based Mac Netboot and PC PXE docker container.  Runs DNS, DHCP, TFTP, an
 
 ## Getting Started
 
-Clone the repo, edit the configuration files as needed, and then run ```./buildandrun.sh```
+Follow [this guide](https://www.lonimbus.com/coreos-matchbox-baremetal-grub2)
 
 ## License
 
