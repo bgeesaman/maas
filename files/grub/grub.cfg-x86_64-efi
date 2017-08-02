@@ -1,0 +1,10 @@
+set default="0"
+
+set timeout=10
+
+menuentry 'CoreOS Install' --class os {
+
+     echo 'Loading Linux ...'
+     set root=http,deploy.lab:8080
+     configfile /grub?mac=$net_efinet0_mac
+}

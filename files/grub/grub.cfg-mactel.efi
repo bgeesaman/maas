@@ -1,0 +1,22 @@
+insmod efi_gop
+insmod efi_uga
+insmod video_bochs
+insmod video_cirrus
+insmod all_video
+set gfxpayload=keep
+insmod gzio
+insmod part_gpt
+insmod ext2
+insmod net
+insmod efinet
+insmod http
+
+net_bootp efinet0
+net_add_dns 172.22.10.2
+
+set timeout=1
+set default=0
+set fallback=1
+echo 'Loading Linux on Mac...'
+set root=http,deploy.lab:8080
+configfile /grub?mac=$net_efinet0_dhcp_mac
